@@ -19,18 +19,23 @@ const Hooks = (props) => {
   }, [value]);
   return (
     <>
-      <div  style={{ textAlign: "center" }}>
-        {state.count}
-
-        <button onClick={() => dispatchVlaue("inc")}>Increate count</button>
+      <div style={{ textAlign: "center" }}>
+        <div>
+          <button style={{margin: '10px'}} onClick={() => dispatchVlaue("inc")}>
+            Increate count by useReducer
+          </button>
+          {state.count}
+        </div>
       </div>
-      <hr/>
+      <hr />
       <div style={{ textAlign: "center" }}>
         Increase the value:
         <div>
-          <button onClick={() => lksjdf(value + 1)}>Inc</button>
+          <button style={{margin: '10px'}} onClick={() => lksjdf(value + 1)}>
+            Inc value by useState
+          </button>
+          {value}
         </div>
-        {value}
       </div>
     </>
   );
