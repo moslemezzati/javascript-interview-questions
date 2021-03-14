@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Hooks from './Hooks';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <div>
+      <nav>
+          <ul>
+            <li>
+              <Link to="/hooks">Hooks</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path='/hooks' component={Hooks} />
+        </Switch>
+      </div>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
