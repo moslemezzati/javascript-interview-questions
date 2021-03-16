@@ -1,28 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import Hooks from './examples/Hooks';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import Hooks from "./examples/Hooks";
+import ErrorBoundary from "./examples/ErrorBoundary";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <div>
-      <nav>
+        <nav>
           <ul>
             <li>
               <Link to="/hooks">Hooks</Link>
             </li>
+            <li>
+              <Link to="/error-boundary">ErrorBoundry</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
-          <Route path='/hooks' component={Hooks} />
+          <Route path="/hooks" component={Hooks} />
+          <Route path="/error-boundary" component={ErrorBoundary} />
         </Switch>
       </div>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
