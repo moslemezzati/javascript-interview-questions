@@ -5,6 +5,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Hooks from "./examples/Hooks";
 import ErrorBoundary from "./examples/ErrorBoundary";
+import Memo from "./examples/Memo";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,11 +19,15 @@ ReactDOM.render(
             <li>
               <Link to="/error-boundary">ErrorBoundry</Link>
             </li>
+            <li>
+              <Link to="/memo">Memo</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
           <Route path="/hooks" component={Hooks} />
           <Route path="/error-boundary" component={ErrorBoundary} />
+          <Route path="/memo" component={Memo} />
         </Switch>
       </div>
     </Router>
