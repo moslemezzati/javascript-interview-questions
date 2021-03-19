@@ -7,6 +7,7 @@ import Hooks from "./examples/Hooks";
 import ErrorBoundary from "./examples/ErrorBoundary";
 import Memo from "./examples/Memo";
 import UseCallbackComponent from "./examples/useCallback";
+import UseMemoComponent from "./examples/useMemo";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,6 +27,9 @@ ReactDOM.render(
             <li>
               <Link to="/useCallback">useCallback</Link>
             </li>
+            <li>
+              <Link to="/useMemo">useMemo</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -33,6 +37,7 @@ ReactDOM.render(
           <Route path="/error-boundary" component={ErrorBoundary} />
           <Route path="/memo" component={Memo} />
           <Route path="/useCallback" component={UseCallbackComponent} />
+          <Route path="/useMemo" component={UseMemoComponent} />
         </Switch>
       </div>
     </Router>
