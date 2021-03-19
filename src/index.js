@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import Hooks from "./examples/Hooks";
 import ErrorBoundary from "./examples/ErrorBoundary";
 import Memo from "./examples/Memo";
+import UseCallbackComponent from "./examples/useCallback";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,12 +23,16 @@ ReactDOM.render(
             <li>
               <Link to="/memo">Memo</Link>
             </li>
+            <li>
+              <Link to="/useCallback">useCallback</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
           <Route path="/hooks" component={Hooks} />
           <Route path="/error-boundary" component={ErrorBoundary} />
           <Route path="/memo" component={Memo} />
+          <Route path="/useCallback" component={UseCallbackComponent} />
         </Switch>
       </div>
     </Router>
