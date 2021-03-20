@@ -8,6 +8,7 @@ import ErrorBoundary from "./examples/ErrorBoundary";
 import Memo from "./examples/Memo";
 import UseCallbackComponent from "./examples/useCallback";
 import UseMemoComponent from "./examples/useMemo";
+import PointerEventsComponent from "./examples/PointerEvents";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -30,6 +31,9 @@ ReactDOM.render(
             <li>
               <Link to="/useMemo">useMemo</Link>
             </li>
+            <li>
+              <Link to="/pointer-events">Pointer Events</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -38,6 +42,7 @@ ReactDOM.render(
           <Route path="/memo" component={Memo} />
           <Route path="/useCallback" component={UseCallbackComponent} />
           <Route path="/useMemo" component={UseMemoComponent} />
+          <Route path="/pointer-events" component={PointerEventsComponent} />
         </Switch>
       </div>
     </Router>
