@@ -9,6 +9,7 @@ import Memo from "./examples/Memo";
 import UseCallbackComponent from "./examples/useCallback";
 import UseMemoComponent from "./examples/useMemo";
 import PointerEventsComponent from "./examples/PointerEvents";
+import ForceUpdateComponent from "./examples/ForceUpdate";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -34,6 +35,9 @@ ReactDOM.render(
             <li>
               <Link to="/pointer-events">Pointer Events</Link>
             </li>
+            <li>
+              <Link to="/force-update">ForceUpdate</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -43,6 +47,7 @@ ReactDOM.render(
           <Route path="/useCallback" component={UseCallbackComponent} />
           <Route path="/useMemo" component={UseMemoComponent} />
           <Route path="/pointer-events" component={PointerEventsComponent} />
+          <Route path="/force-update" component={ForceUpdateComponent} />
         </Switch>
       </div>
     </Router>
