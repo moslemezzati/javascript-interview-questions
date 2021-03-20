@@ -10,6 +10,7 @@ import UseCallbackComponent from "./examples/useCallback";
 import UseMemoComponent from "./examples/useMemo";
 import PointerEventsComponent from "./examples/PointerEvents";
 import ForceUpdateComponent from "./examples/ForceUpdate";
+import BrowserResizeComponent from "./examples/BrowserResize";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -38,6 +39,9 @@ ReactDOM.render(
             <li>
               <Link to="/force-update">ForceUpdate</Link>
             </li>
+            <li>
+              <Link to="/browser-resize">Browser Resize</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -48,6 +52,7 @@ ReactDOM.render(
           <Route path="/useMemo" component={UseMemoComponent} />
           <Route path="/pointer-events" component={PointerEventsComponent} />
           <Route path="/force-update" component={ForceUpdateComponent} />
+          <Route path="/browser-resize" component={BrowserResizeComponent} />
         </Switch>
       </div>
     </Router>
