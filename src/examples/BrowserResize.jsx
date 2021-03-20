@@ -1,4 +1,5 @@
 import React from "react";
+import SourceLink from "../components/SourceLink";
 
 function debounce(fn, ms) {
   let timer;
@@ -65,10 +66,18 @@ class WindowDimensions extends React.Component {
         <div>
           <h3>By class</h3>
           {this.state.width} x {this.state.height}
+          <SourceLink
+            title="Reactjs Interview Questions"
+            link="https://github.com/sudheerj/reactjs-interview-questions#how-to-re-render-the-view-when-the-browser-is-resized"
+          />
         </div>
         <div>
           <h3>By Hooks</h3>
           <MyComponent />
+          <SourceLink
+            title="pluralsight"
+            link="https://www.pluralsight.com/guides/re-render-react-component-on-window-resize"
+          />
         </div>
       </>
     );
