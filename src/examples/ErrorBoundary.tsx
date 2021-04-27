@@ -36,10 +36,10 @@ class ErrorBoundary extends React.Component<
       // You can render any custom fallback UI
       return (
         <>
-          <h2>Something went wrong.</h2>
-          <h4>error message: </h4>
+          <h5>Something went wrong.</h5>
+          <h5>error message: </h5>
           <div>{error.message}</div>
-          <h4>error stack:</h4>
+          <h5>error stack:</h5>
           <small>{error.stack}</small>
           <hr />
           <small>{info.componentStack}</small>
