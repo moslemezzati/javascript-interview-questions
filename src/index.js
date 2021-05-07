@@ -12,6 +12,8 @@ import PointerEventsComponent from './examples/PointerEvents';
 import ForceUpdateComponent from './examples/ForceUpdate';
 import BrowserResizeComponent from './examples/BrowserResize';
 import PureComponent from './examples/PureComponent';
+import RenderProps from './examples/RenderProps';
+import HOC from './examples/HOC';
 
 const components = [
   { text: 'PureComponent', Component: PureComponent },
@@ -23,6 +25,8 @@ const components = [
   { text: 'useMemo', Component: UseMemoComponent },
   { text: 'useCallback', Component: UseCallbackComponent },
   { text: 'PointerEventsComponent', Component: PointerEventsComponent },
+  { text: 'RenderProps', Component:  RenderProps},
+  { text: 'HOC', Component:  HOC},
 ];
 
 const ItemLink = ({ to, text }) => (
