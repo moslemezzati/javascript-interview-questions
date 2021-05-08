@@ -14,8 +14,10 @@ import BrowserResizeComponent from './examples/BrowserResize';
 import PureComponent from './examples/PureComponent';
 import RenderProps from './examples/RenderProps';
 import HOC from './examples/HOC';
+import RefComponent from './examples/Ref';
 
 const components = [
+  { text: 'Ref', Component: RefComponent },
   { text: 'PureComponent', Component: PureComponent },
   { text: 'BrowserResizeComponent', Component: BrowserResizeComponent },
   { text: 'ForceUpdateComponent', Component: ForceUpdateComponent },
@@ -38,7 +40,7 @@ const ItemLink = ({ to, text }) => (
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <div style={{display: 'grid', gridTemplateColumns: 'auto auto'}}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}>
         <div>
           <ul>
             {components.map((component, index) => (
