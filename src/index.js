@@ -25,8 +25,8 @@ const components = [
   { text: 'useMemo', Component: UseMemoComponent },
   { text: 'useCallback', Component: UseCallbackComponent },
   { text: 'PointerEventsComponent', Component: PointerEventsComponent },
-  { text: 'RenderProps', Component:  RenderProps},
-  { text: 'HOC', Component:  HOC},
+  { text: 'RenderProps', Component: RenderProps },
+  { text: 'HOC', Component: HOC },
 ];
 
 const ItemLink = ({ to, text }) => (
@@ -38,8 +38,8 @@ const ItemLink = ({ to, text }) => (
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <div>
-        <nav>
+      <div style={{display: 'grid', gridTemplateColumns: 'auto auto'}}>
+        <div>
           <ul>
             {components.map((component, index) => (
               <ItemLink
@@ -49,16 +49,18 @@ ReactDOM.render(
               />
             ))}
           </ul>
-        </nav>
-        <Switch>
-          {components.map((component, index) => (
-            <Route
-              key={index}
-              component={component.Component}
-              path={'/' + component.text}
-            />
-          ))}
-        </Switch>
+        </div>
+        <div>
+          <Switch>
+            {components.map((component, index) => (
+              <Route
+                key={index}
+                component={component.Component}
+                path={'/' + component.text}
+              />
+            ))}
+          </Switch>
+        </div>
       </div>
     </Router>
   </React.StrictMode>,
