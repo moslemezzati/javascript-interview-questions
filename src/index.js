@@ -15,6 +15,7 @@ import PureComponent from './examples/PureComponent';
 import RenderProps from './examples/RenderProps';
 import HOC from './examples/HOC';
 import RefComponent from './examples/Ref';
+import ContextComponent from './examples/Context';
 
 const components = [
   { text: 'Ref', Component: RefComponent },
@@ -29,6 +30,7 @@ const components = [
   { text: 'PointerEventsComponent', Component: PointerEventsComponent },
   { text: 'RenderProps', Component: RenderProps },
   { text: 'HOC', Component: HOC },
+  { text: 'Context', Component: ContextComponent },
 ];
 
 const ItemLink = ({ to, text }) => (
