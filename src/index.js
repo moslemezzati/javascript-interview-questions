@@ -16,8 +16,10 @@ import RenderProps from './examples/RenderProps';
 import HOC from './examples/HOC';
 import RefComponent from './examples/Ref';
 import ContextComponent from './examples/Context';
+import LazyLoading from './examples/LazyLoading';
 
 const components = [
+  { text: 'LazyLoading', Component: LazyLoading },
   { text: 'Ref', Component: RefComponent },
   { text: 'PureComponent', Component: PureComponent },
   { text: 'BrowserResizeComponent', Component: BrowserResizeComponent },
