@@ -17,8 +17,10 @@ import HOC from './examples/HOC';
 import RefComponent from './examples/Ref';
 import ContextComponent from './examples/Context';
 import LazyLoading from './examples/LazyLoading';
+import Children from './examples/Children';
 
 const components = [
+  { text: 'Children', Component: Children },
   { text: 'LazyLoading', Component: LazyLoading },
   { text: 'Ref', Component: RefComponent },
   { text: 'PureComponent', Component: PureComponent },
