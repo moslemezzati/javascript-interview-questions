@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 interface ButtonProps {
   type?: string;
