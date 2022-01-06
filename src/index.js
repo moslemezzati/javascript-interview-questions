@@ -18,6 +18,7 @@ import RefComponent from './examples/Ref';
 import ContextComponent from './examples/Context';
 import LazyLoading from './examples/LazyLoading';
 import Children from './examples/Children';
+import useOnClickOutside from './examples/useOnClickOutside';
 
 const components = [
   { text: 'Children', Component: Children },
@@ -35,6 +36,7 @@ const components = [
   { text: 'RenderProps', Component: RenderProps },
   { text: 'HOC', Component: HOC },
   { text: 'Context', Component: ContextComponent },
+  { text: 'useOnClickOutside', Component: useOnClickOutside },
 ];
 
 const ItemLink = ({ to, text }) => (

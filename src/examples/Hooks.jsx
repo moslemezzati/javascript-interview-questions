@@ -3,14 +3,21 @@ const countReducer = (state, action) => {
   switch (action) {
     case "inc":
       return { ...state, count: state.count + 1 };
+    case "dec":
+      return { ...state, count: state.count - 1 };
     default:
       return { ...state };
   }
 };
 
 const Hooks = (props) => {
-  const [value, lksjdf] = useState(0);
+  const [value, setValue] = useState(0);
   const [state, dispatchVlaue] = useReducer(countReducer, { count: 0 });
+  const [counter, setCounter] = useReducer((number, newNumber) => {
+    console.log({number, newNumber});
+    return number + newNumber;
+  }, 0);
+
   useEffect(() => {
     console.log("the value is:", value);
     return () => {
@@ -20,18 +27,31 @@ const Hooks = (props) => {
   return (
     <>
       <div style={{ textAlign: "center" }}>
-        <div>
+        <div style={{display: 'flex', flexDirection: 'column'}}>
           <button style={{margin: '10px'}} onClick={() => dispatchVlaue("inc")}>
-            Increate count by useReducer
+            Increate count by useReducer and dispatch
           </button>
           {state.count}
+          <button style={{margin: '10px'}} onClick={() => dispatchVlaue("dec")}>
+            Decrease count by useReducer and dispatch
+          </button>
         </div>
       </div>
       <hr />
       <div style={{ textAlign: "center" }}>
         Increase the value:
         <div>
-          <button style={{margin: '10px'}} onClick={() => lksjdf(value + 1)}>
+          <button style={{margin: '10px'}} onClick={() => setCounter(1)}>
+            Inc value by reducer and function callback
+          </button>
+          {counter}
+        </div>
+      </div>
+      <hr />
+      <div style={{ textAlign: "center" }}>
+        Increase the value:
+        <div>
+          <button style={{margin: '10px'}} onClick={() => setValue(value + 1)}>
             Inc value by useState
           </button>
           {value}
