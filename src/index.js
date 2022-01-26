@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Hooks from './examples/Hooks';
@@ -51,7 +51,7 @@ const ItemLink = ({ to, text }) => (
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <BrowserRouter>
       <div style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}>
         <div>
           <ul>
@@ -65,18 +65,18 @@ ReactDOM.render(
           </ul>
         </div>
         <div>
-          <Switch>
-            {components.map((component, index) => (
+          <Routes>
+            {components.map(({Component, text}, index) => (
               <Route
                 key={index}
-                component={component.Component}
-                path={'/' + component.text}
+                element={<Component />}
+                path={'/' + text}
               />
             ))}
-          </Switch>
+          </Routes>
         </div>
       </div>
-    </Router>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
