@@ -12,7 +12,7 @@ const countReducer = (state, action) => {
 
 const Hooks = (props) => {
   const [value, setValue] = useState(0);
-  const [state, dispatchVlaue] = useReducer(countReducer, { count: 0 });
+  const [state, dispatchValue] = useReducer(countReducer, { count: 0 });
   const [counter, setCounter] = useReducer((number, newNumber) => {
     console.log({number, newNumber});
     return number + newNumber;
@@ -28,11 +28,11 @@ const Hooks = (props) => {
     <>
       <div style={{ textAlign: "center" }}>
         <div style={{display: 'flex', flexDirection: 'column'}}>
-          <button style={{margin: '10px'}} onClick={() => dispatchVlaue("inc")}>
+          <button style={{margin: '10px'}} onClick={() => dispatchValue("inc")}>
             Increate count by useReducer and dispatch
           </button>
           {state.count}
-          <button style={{margin: '10px'}} onClick={() => dispatchVlaue("dec")}>
+          <button style={{margin: '10px'}} onClick={() => dispatchValue("dec")}>
             Decrease count by useReducer and dispatch
           </button>
         </div>
