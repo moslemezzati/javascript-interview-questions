@@ -20,6 +20,7 @@ import LazyLoading from './examples/LazyLoading';
 import Children from './examples/Children';
 import useOnClickOutside from './examples/useOnClickOutside';
 import Lists from './components/ContainerComponents/Lists';
+import { Steps } from './components/UncontrolledOnboardingFlow';
 
 const components = [
   { text: 'Children', Component: Children },
@@ -39,6 +40,7 @@ const components = [
   { text: 'Context', Component: ContextComponent },
   { text: 'useOnClickOutside', Component: useOnClickOutside },
   { text: 'ContainerComponent', Component: Lists },
+  { text: 'UncontrolledOnboardingFlow', Component: Steps },
 ];
 
 const ItemLink = ({ to, text }) => (
