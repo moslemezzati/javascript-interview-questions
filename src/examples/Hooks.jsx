@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
+
 const countReducer = (state, action) => {
-  switch (action) {
+  switch (action.type) {
     case "inc":
       return { ...state, count: state.count + 1 };
     case "dec":
@@ -14,7 +15,7 @@ const Hooks = (props) => {
   const [value, setValue] = useState(0);
   const [state, dispatchValue] = useReducer(countReducer, { count: 0 });
   const [counter, setCounter] = useReducer((number, newNumber) => {
-    console.log({number, newNumber});
+    console.log({ number, newNumber });
     return number + newNumber;
   }, 0);
 
@@ -27,12 +28,18 @@ const Hooks = (props) => {
   return (
     <>
       <div style={{ textAlign: "center" }}>
-        <div style={{display: 'flex', flexDirection: 'column'}}>
-          <button style={{margin: '10px'}} onClick={() => dispatchValue("inc")}>
-            Increate count by useReducer and dispatch
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <button
+            style={{ margin: "10px" }}
+            onClick={() => dispatchValue({ type: "inc" })}
+          >
+            Increase count by useReducer and dispatch
           </button>
           {state.count}
-          <button style={{margin: '10px'}} onClick={() => dispatchValue("dec")}>
+          <button
+            style={{ margin: "10px" }}
+            onClick={() => dispatchValue({ type: "dec" })}
+          >
             Decrease count by useReducer and dispatch
           </button>
         </div>
@@ -41,7 +48,7 @@ const Hooks = (props) => {
       <div style={{ textAlign: "center" }}>
         Increase the value:
         <div>
-          <button style={{margin: '10px'}} onClick={() => setCounter(1)}>
+          <button style={{ margin: "10px" }} onClick={() => setCounter(1)}>
             Inc value by reducer and function callback
           </button>
           {counter}
@@ -51,7 +58,10 @@ const Hooks = (props) => {
       <div style={{ textAlign: "center" }}>
         Increase the value:
         <div>
-          <button style={{margin: '10px'}} onClick={() => setValue(value + 1)}>
+          <button
+            style={{ margin: "10px" }}
+            onClick={() => setValue(value + 1)}
+          >
             Inc value by useState
           </button>
           {value}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface MyContextProviderState {
   users: string[];
@@ -10,14 +10,14 @@ interface MyContextType {
 }
 
 const MyContext = React.createContext<MyContextType>({
-  users: ['Aco', 'Ario'],
+  users: ["Aco", "Ario"],
   updateUser: () => {},
 });
 
 class MyContextProvider extends React.Component<{}, MyContextProviderState> {
   constructor(props: {}) {
     super(props);
-    this.state = { users: ['Aco', 'Ario'] };
+    this.state = { users: ["Aco", "Ario"] };
   }
 
   handlerUpdateUser = (user: string) => {
@@ -47,7 +47,7 @@ class UserInput extends React.Component {
                 <li key={user}>{user}</li>
               ))}
             </ul>
-            <button onClick={() => value.updateUser('Mandana')}>
+            <button onClick={() => value.updateUser("Mandana")}>
               Add user
             </button>
           </div>
@@ -70,7 +70,7 @@ class HomePage extends React.Component {
             <li key={user}>{user}</li>
           ))}
         </ul>
-        <button onClick={() => this.context.updateUser('Rozhin')}>
+        <button onClick={() => this.context.updateUser("Rozhin")}>
           Add user
         </button>
         <UserInput />
