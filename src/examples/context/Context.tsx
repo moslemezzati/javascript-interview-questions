@@ -79,11 +79,10 @@ class HomePage extends React.Component {
   }
 }
 
-function App() {
+export default function App() {
   return (
     <MyContextProvider>
       <HomePage />
     </MyContextProvider>
   );
 }
-export default App;

@@ -5807,14 +5807,14 @@ You can download the PDF and Epub version of this repository from the latest run
 
      ```javascript
      //Lets create a context with a default theme value "luna"
-     const ThemeContext = React.createContext('luna');
+     const ThemeProvider = React.createContext('luna');
      // Create App component where it uses provider to pass theme value in the tree
      class App extends React.Component {
        render() {
          return (
-           <ThemeContext.Provider value="nova">
+           <ThemeProvider.Provider value="nova">
              <Toolbar />
-           </ThemeContext.Provider>
+           </ThemeProvider.Provider>
          );
        }
      }
@@ -5828,7 +5828,7 @@ You can download the PDF and Epub version of this repository from the latest run
      }
      // Lets read theme value in the button component to use
      class ThemedButton extends React.Component {
-       static contextType = ThemeContext;
+       static contextType = ThemeProvider;
        render() {
          return <Button theme={this.context} />;
        }

@@ -15,14 +15,14 @@ import PureComponent from "./examples/PureComponent";
 import RenderProps from "./examples/RenderProps";
 import HOC from "./examples/HOC";
 import RefComponent from "./examples/Ref";
-import ContextComponent from "./examples/Context";
+// import ContextComponent from "./examples/context/Context";
 import LazyLoading from "./examples/LazyLoading";
 import Children from "./examples/Children";
 import useOnClickOutside from "./examples/useOnClickOutside";
 import Lists from "./components/ContainerComponents/Lists";
 import { Steps } from "./components/UncontrolledOnboardingFlow";
 import ReducerComponent from "./examples/Reducer";
-import UseContext from "./examples/useContext";
+import ContextComponent from "./examples/context/";
 
 const components = [
   { text: "Children", Component: Children },
@@ -39,8 +39,8 @@ const components = [
   { text: "PointerEventsComponent", Component: PointerEventsComponent },
   { text: "RenderProps", Component: RenderProps },
   { text: "HOC", Component: HOC },
-  { text: "Context", Component: ContextComponent },
-  { text: "useContext", Component: UseContext },
+  // { text: "Context", Component: ContextComponent },
+  { text: "useContext", Component: ContextComponent },
   { text: "useOnClickOutside", Component: useOnClickOutside },
   { text: "ContainerComponent", Component: Lists },
   { text: "UncontrolledOnboardingFlow", Component: Steps },
