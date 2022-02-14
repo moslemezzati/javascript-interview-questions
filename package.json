@@ -10,6 +10,9 @@
     "@types/node": "^14.14.35",
     "@types/react-dom": "^17.0.2",
     "@types/styled-components": "^5.1.9",
+    "faker": "^6.6.6",
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.2.1",
@@ -43,6 +46,9 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.6",
+    "@types/lodash": "^4.14.178",
+    "@types/lodash.debounce": "^4.0.6",
     "@types/react": "^17.0.39",
     "prettier": "2.5.1"
   }

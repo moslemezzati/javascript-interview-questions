@@ -23,6 +23,7 @@ import Lists from "./components/ContainerComponents/Lists";
 import { Steps } from "./components/UncontrolledOnboardingFlow";
 import ReducerComponent from "./examples/Reducer";
 import ContextComponent from "./examples/context/";
+import Debounce from "./examples/Debounce";
 
 const components = [
   { text: "Children", Component: Children },
@@ -45,6 +46,7 @@ const components = [
   { text: "ContainerComponent", Component: Lists },
   { text: "UncontrolledOnboardingFlow", Component: Steps },
   { text: "Reducer", Component: ReducerComponent },
+  { text: "Debounce", Component: Debounce },
 ];
 
 const ItemLink = ({ to, text }) => (
